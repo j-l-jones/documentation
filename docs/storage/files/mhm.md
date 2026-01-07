@@ -45,21 +45,12 @@ When you load a .mhm file, MakeHuman2:
 - Reconstructs the character procedurally
 
 ### Creation
-
 .mhm files are generated via File -> Save and stored in the user data directory under /models/
 
-<div style="margin-left: 2em;">
-
-#### Windows
-
-todo
-
-#### MacOS
-~/Documents/MakeHuman/v1py3/data/models/
-#### Linux
-todo
-</div>
-
+- **Windows**: todo
+- **MacOS**: ~/Documents/MakeHuman/v1py3/data/models/
+- **Linux**: todo
+  
 
 <img src="file-save-mhm.png" alt="MHM file save dialog" width="400">
 
