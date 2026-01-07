@@ -47,9 +47,7 @@ When you load a .mhm file, MakeHuman2:
 ### Creation
 .mhm files are generated via File -> Save and stored in the user data directory under /models/
 
-- **Windows**: todo
-- **MacOS**: ~/Documents/MakeHuman/v1py3/data/models/
-- **Linux**: todo
+\<UserDataPath\>/data/models/\<mesh_name\>/
   
 
 <img src="file-save-mhm.png" alt="MHM file save dialog" width="400">
@@ -58,25 +56,16 @@ When you load a .mhm file, MakeHuman2:
 
 \# MakeHuman2 Model File
 version v2.0.1\
-uuid 4e488d21-e948-4a72-afcc-7ea517d8d72d\
 name foo\
-tags example\
-camera 27.5 324.5 0.0 0.0 0.0 1.0\
-modifier breast/BreastSize 0.500000\
-modifier breast/BreastFirmness 0.500000\
-modifier macrodetails/Gender 0.500000\
-modifier macrodetails/Age 0.500000\
-modifier macrodetails/African 0.333333\
-modifier macrodetails/Asian 0.333333\
-modifier macrodetails/Caucasian 0.333333\
-modifier macrodetails-universal/Muscle 0.500000\
-modifier macrodetails-universal/Weight 0.500000\
-modifier macrodetails-height/Height 0.500000\
-modifier macrodetails-proportions/BodyProportions 0.500000\
+author foo\
+uuid 4315e863-03d7-44cd-a207-b2d797ee54e7\
+tags example;foo\
 eyes HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6\
-clothesHideFaces True\
+clothes female_casualsuit01 a8b0e841-144b-4f03-8b9e-ea8fdce8c863\
+clothes fedora 566dbd52-71d1-4d76-a799-0474a5a384db\
+hair bob02 cd7840cf-b340-49e9-a505-8a5a22a86db2\
 skinMaterial skins/default.mhmat\
-material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat\
-subdivide False
+material HighPolyEyes 2c12f43b-1303-432c-b7ce-d78346baf2e6 eyes/materials/brown.mhmat
+
 
 
