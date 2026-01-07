@@ -55,6 +55,8 @@ todo
 #### Linux
 todo
 
+<img src="file-save-mhm.png" alt="MHM file save dialog" width="400">
+
 ### Example .mhm file
 
 \# MakeHuman2 Model File
