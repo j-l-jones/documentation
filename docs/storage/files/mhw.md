@@ -51,7 +51,7 @@ Typically used for:
 
 .mhw files are skeleton (.mhskel) dependent.
 
-- A compatible skeleton (.mhskel) is present
+- A compatible skeleton (.mhskel)
 
 - Bone names and hierarchy match the target rig
 
