@@ -88,6 +88,90 @@ A `.mhpose` file contains the following fields:
 }
 ```
 
+## Unit Poses
+
+Unit poses are predefined atomic facial movements stored in the pose unit library:
+
+- **Definition file**: `data/poseunits/face-poseunits.json` - maps frame names to descriptions
+- **Animation file**: `data/poseunits/face-poseunits.bvh` - contains the actual pose data
+
+Each unit pose represents a single, isolated facial muscle movement that can be combined with others.
+
+### Available Unit Pose Names
+
+The following unit pose names are available for use in `.mhpose` files:
+
+**Cheek Controls:**
+
+- `CheeksPump` - Puff out both cheeks
+- `CheeksSuck` - Suck in both cheeks
+- `LeftCheekUp` - Raise left cheek
+- `RightCheekUp` - Raise right cheek
+
+**Jaw and Chin Controls:**
+
+- `JawDrop` - Open jaw/mouth
+- `JawDropStretched` - Open jaw with stretched mouth
+- `ChinRight` - Move chin to the right
+
+**Brow Controls:**
+
+- `LeftBrowDown` - Lower left eyebrow
+- `LeftInnerBrowUp` - Raise left inner eyebrow
+- `LeftOuterBrowUp` - Raise left outer eyebrow
+- `RightBrowDown` - Lower right eyebrow
+- `RightInnerBrowUp` - Raise right inner eyebrow
+- `RightOuterBrowUp` - Raise right outer eyebrow
+
+**Eye Controls:**
+
+- `LeftEyeUp` - Look up with left eye
+- `LeftEyeturnRight` - Turn left eye to the right
+- `LeftUpperLidOpen` - Open left upper eyelid
+- `LeftUpperLidClosed` - Close left upper eyelid
+- `LeftLowerLidUp` - Raise left lower eyelid
+- `RightEyeUp` - Look up with right eye
+- `RightEyeturnRight` - Turn right eye to the right
+- `RightUpperLidOpen` - Open right upper eyelid
+- `RightUpperLidClosed` - Close right upper eyelid
+- `RightLowerLidUp` - Raise right lower eyelid
+
+**Mouth Movement Controls:**
+
+- `MouthMoveLeft` - Move mouth to the left
+- `MouthLeftPullDown` - Pull left corner of mouth down
+- `MouthLeftPullSide` - Pull left corner of mouth to the side
+- `MouthLeftPullUp` - Pull left corner of mouth up (smile)
+- `MouthRightPullDown` - Pull right corner of mouth down
+- `MouthRightPullSide` - Pull right corner of mouth to the side
+- `MouthRightPullUp` - Pull right corner of mouth up (smile)
+- `MouthLeftPlatysma` - Activate left platysma muscle (neck tension)
+- `MouthRightPlatysma` - Activate right platysma muscle (neck tension)
+
+**Lip Controls:**
+
+- `LipsKiss` - Pucker lips for kissing
+- `UpperLipUp` - Raise upper lip
+- `UpperLipForward` - Push upper lip forward
+- `UpperLipBackward` - Pull upper lip backward
+- `UpperLipStretched` - Stretch upper lip horizontally
+- `lowerLipUp` - Raise lower lip
+- `lowerLipDown` - Lower lower lip
+- `lowerLipForward` - Push lower lip forward
+- `lowerLipBackward` - Pull lower lip backward
+
+**Nose and Face Controls:**
+
+- `NoseWrinkler` - Wrinkle/scrunch nose
+- `NasolabialDeepener` - Deepen nasolabial folds (smile lines)
+
+## Weight Values
+
+- Weights typically range from **0.0** (no influence) to **1.0** (full influence)
+- Values can exceed 1.0 for exaggerated effects
+- Only non-zero weights need to be specified in the `unit_poses` dictionary
+- The final expression is computed as a weighted linear blend of the specified unit poses
+
 
 ### Example .mhpose file
 
