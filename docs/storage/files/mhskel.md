@@ -5,7 +5,7 @@ description: "MakeHuman Skeleton file"
 ---
 
 ## .mhskel file
-# MakeHuman skeleton file
+# MakeHuman Skeleton file
 
 ## Overview
 
@@ -38,6 +38,8 @@ When you choose a skeleton in MakeHuman, the program uses a .mhskel file to:
 - Prepare the character for posing, animation, or export
 
 ## How .mhskel is used
+
+<img src="mhskel-usage.png" alt="MHM file save dialog" width="400">
 
 When a skeleton is applied:
 
@@ -180,8 +182,6 @@ This separation allows the same skeleton to fit many characters.
 .mhskel files are stored in the user data directory under /rigs/
 
 \<UserDataPath\>/data/rigs/\<mesh_name\>/
-
-<img src="mhskel-usage.png" alt="MHM file save dialog" width="400">
 
 
 ### Example .mhskel file
