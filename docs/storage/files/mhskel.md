@@ -242,7 +242,7 @@ The "bones" object defines the skeleton hierarchy. Each key is a bone name, and 
 }
 ```
 
-#### Fields
+##### Fields
 
 **head** (string, required): Joint name defining the start/root position of the bone
 **tail** (string, required): Joint name defining the end/tip position of the bone
