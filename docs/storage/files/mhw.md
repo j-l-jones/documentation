@@ -158,4 +158,5 @@ If the same vertex appears multiple times for the same bone:
 
 
 
-[^1]: This is the footnote text.
+[^1]: **Linear blend skinning**: A method for attaching a character’s surface to its skeleton, where each vertex follows a weighted average of the movements of its influencing bones.
+
