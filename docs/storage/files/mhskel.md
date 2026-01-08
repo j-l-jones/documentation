@@ -328,7 +328,7 @@ Uses reference bones to map pose transformations
 Uses weights_reference bones to map vertex skinning weights
 
 ### Related Files
-**.mhw** (MakeHuman Weights): Binary file containing vertex-to-bone weight assignments
+**.mhw** (MakeHuman Weights): Text file containing vertex-to-bone weight assignments
 
 **.mhpose**: Pose files that can be applied to skeletons
 
