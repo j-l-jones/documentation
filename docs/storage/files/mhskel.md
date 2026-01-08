@@ -57,9 +57,9 @@ When a skeleton is applied:
 
 This allows the same character to be exported with different skeletons without changing the .mhm file.
 
-### Data model
+## Data model
 
-#### Core concepts
+### Core concepts
 
 An .mhskel file defines:
 
@@ -75,7 +75,7 @@ An .mhskel file defines:
 
 Each of these is independent, which allows skeletons to remain reusable across characters and exports.
 
-##### Bones
+#### Bones
 
 Each bone entry defines:
 
@@ -95,7 +95,7 @@ The rest pose specifies:
 
 Bones are defined in local space, not world space.
 
-##### Hierarchy
+#### Hierarchy
 
 Bones are organized into a tree structure:
 
@@ -114,7 +114,7 @@ The hierarchy defines:
 - Which parts of the body move together
 
 
-##### Rest pose
+#### Rest pose
 
 The rest pose describes the neutral skeleton state:
 
@@ -127,7 +127,7 @@ The rest pose describes the neutral skeleton state:
 All animation, posing, and export transformations are applied relative to this rest pose.
 
 
-##### Semantic roles
+#### Semantic roles
 
 Bones in an .mhskel file may carry semantic tags, such as:
 
@@ -145,7 +145,7 @@ These tags are used by:
 
 - Tooling logic
   
-###### Tooling logic
+##### Tooling logic
 
 When an .mhskel file assigns semantic roles to bones, tooling logic uses those roles to decide things like:
 
@@ -162,7 +162,7 @@ When an .mhskel file assigns semantic roles to bones, tooling logic uses those r
 - Which bones are treated as helpers or references
 
 
-##### Character attachment model
+#### Character attachment model
 
 An .mhskel file defines how bones are anchored to the character via:
 
@@ -180,7 +180,7 @@ During skeleton application:
 
 This separation allows the same skeleton to fit many characters.
 
-### Location
+## Location
 .mhskel files are stored in the user or system data directory under /rigs/
 
 \<UserDataPath\>/data/rigs/\<mesh_name\>/
@@ -206,16 +206,17 @@ The file is a JSON document with the following top-level structure:
 }
 ```
 
-#### Top-Level Fields
+### Top-Level Fields
 
-##### Metadata
+#### Metadata
 
 **name** (string, required): Human-readable name of the skeleton
 **version** (integer, required): Skeleton format version number (current: 110)
 **description** (string, optional): Detailed description of the skeleton's purpose, features, and intended use cases
 **copyright** (string, optional): Copyright information for the skeleton definition license (string, optional): License under which the skeleton is distributed (e.g., "CC0", "AGPL3")
 
-#### Configuration Fields
+#### Configuration
+
 **plane_map_strategy** (integer, optional, default: 3): Strategy for mapping rotation planes from reference skeleton:
 
 1: Use first reference bone only
@@ -241,16 +242,16 @@ The "bones" object defines the skeleton hierarchy. Each key is a bone name, and 
 }
 ```
 
-##### Fields:
+#### Fields
 
 **head** (string, required): Joint name defining the start/root position of the bone
 **tail** (string, required): Joint name defining the end/tip position of the bone
-parent (string, optional): Name of the parent bone in the hierarchy. Omit or set to null for root bones
+**parent** (string, optional): Name of the parent bone in the hierarchy. Omit or set to null for root bones
 **reference** (array of strings or null, optional): List of bone names from the reference skeleton that this bone maps to for pose transformation purposes
 **weights_reference** (array of strings, optional): List of bone names from the reference skeleton to use for vertex weight mapping. If omitted, uses the reference field or attempts implicit mapping by bone name
 **rotation_plane** (string or array, optional): Name of the plane(s) used to calculate the bone's roll angle (rotation around its local Y-axis)
 
-###### Naming Conventions:
+##### Naming Conventions:
 
 Bilateral bones use .L and .R suffixes for left and right sides
 
@@ -265,12 +266,12 @@ The "joints" object maps joint names to vertex indices on the base mesh. Joint p
 }
 ```
 
-##### Fields:
+##### Fields
 
 **Key** (string): Unique joint identifier (referenced by bones' head and tail fields)
 **Value** (array of integers): List of vertex indices from the base mesh. The joint position is computed as the centroid of these vertices
 
-##### Purpose:
+##### Purpose
 
 Allows skeleton to automatically adapt to mesh modifications
 
@@ -289,12 +290,12 @@ The "planes" object defines orientation planes used to calculate bone roll angle
 }
 ```
 
-##### Fields:
+##### Fields
 
 **Key** (string): Unique plane identifier (referenced by bones' rotation_plane field)
 **Value** (array of 3 strings): Three joint names that define the plane. The normal vector of this plane determines the bone's roll angle
 
-##### Purpose:
+##### Purpose
 
 Controls how bones rotate around their length axis (roll/twist)
 
@@ -306,20 +307,20 @@ Ensures natural deformation during animation
 
 #### Within MakeHuman:
 
-The default reference skeleton is rigs/default.mhskel
+The default reference skeleton is default.mhskel
 
 Custom skeletons can reference the default skeleton for weight and pose mapping
 
 Not used for internal posing (MakeHuman uses its base skeleton for that)
 
-#### For Export:
+#### For Export
 Selected skeleton is exported with the model to external applications
 
 Supports various export formats (FBX, Collada, glTF, etc.)
 
 Provides animation-ready rigs for Blender, Unity, Unreal Engine, etc.
 
-#### Weight Mapping:
+#### Weight Mapping
 If a skeleton doesn't have explicit weights, they're remapped from the reference skeleton
 
 Uses reference bones to map pose transformations
