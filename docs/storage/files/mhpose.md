@@ -1,11 +1,28 @@
 ---
 title: ".mhpose file"
 weight: 20
-description: "MakeHuman Expression Pose file"
+description: "MakeHuman Pose file"
 ---
 
 ## .mhpose file
-# MakeHuman Expression Pose file
+# MakeHuman Pose file
+
+<!-- feedback from Ralf:
+mhpose files are no longer limited to the face. They work for body as well (here a few testing might be still needed btw.). 
+
+With the pose editor (icon with arm), one can create the pose. 
+
+The pose will appear in identical to bvh files in normal pose selection.
+
+when creating an own one: the parameter homepage is no longer available. [✅️]
+
+technical the face- and poseeditor are nearly the same. 
+
+One of the few classes where I used super() to work with inherited parameters 😉  
+
+In gui / poseeditor the methods loadButton and saveButton do the rather simple job directly. 
+
+-->
 
 ## Overview
 
@@ -58,7 +75,6 @@ A `.mhpose` file contains the following fields:
 - **`author`** (string): Creator of the expression
 - **`copyright`** (string): Copyright information
 - **`license`** (string): License under which the expression is distributed
-- **`homepage`** (string): Website URL related to the expression author
 
 ## Example
 
@@ -84,7 +100,6 @@ A `.mhpose` file contains the following fields:
     "author": "MakeHuman Community",
     "copyright": "© 2026 MakeHuman Community",
     "license": "CC0",
-    "homepage": "http://www.makehumancommunity.org/"
 }
 ```
 

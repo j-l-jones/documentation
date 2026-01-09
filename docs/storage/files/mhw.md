@@ -4,6 +4,29 @@ weight: 20
 description: "MakeHuman Weights file"
 ---
 
+<!--
+feedback from Ralf:
+
+Btw. mhw file:  
+duplication of weights will only happen in case of a referenced skeleton afaik.  
+
+An mhw file only contains bone weights, 
+no animation and pose data (copy and paste error 😉 ? )
+
+mhw files are usually added for the base mesh + helper, 
+but they could also be used for e.g. other meshes (check standard shoes ...)
+
+So saving is line 370-372 ...
+
+btw, check the skeleton colors after loading a skeleton.  
+
+There is a skeleton even without loading (presented in red), loaded it is white. 
+
+In pose mode it switches back to standard skeleton and is displayed in orange (also when there is no skeleton). 
+
+This is the "internal behaviour".
+-->
+
 ## .mhw file
 # MakeHuman Weights file
 

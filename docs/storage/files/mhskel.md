@@ -4,6 +4,49 @@ weight: 20
 description: "MakeHuman Skeleton file"
 ---
 
+<!--
+# feedback from Ralf
+
+Hi, you need to be careful, when using old makehuman. 
+
+The "old" skeleton file has some logic which I did not find in an existent skeleton.  So I left that out. Maybe it was just an idea or it was used before.  
+
+"plane_map_strategy" ? If you find sth. like that I would implement the logic (if it is still there). 
+
+Also rotation planes are interesting but not really used ... which is a problem btw.
+
+The reader itself is in core / skeleton.py (loadJSON). 
+
+The keywords are 
+
+name, 
+joints, 
+bones, 
+planes, 
+head, 
+tail, 
+rotation_plane, 
+parent and 
+weights_file, r
+eference, 
+weights_reference 
+(+ meta tags which are displayed in selection only).  
+
+When you have skeletons in system and user and they use different names, both can be used (as a rule: that is always true not only for skeletons). 
+
+If you would use the same name in user and system accidentally, user is used. 
+
+With that technique one can "overwrite" a file provided by system.
+
+makehuman only has bones deforming the mesh (and some with no weights to connect 2 bones).  
+
+The default skeleton is there without even loading, so one can pose a character without that. 
+
+But in case of export there will be no animation possible. 
+
+Reference bones are normal bones, which use the weights of one or more bones of the standard skeleton.
+-->
+
 ## .mhskel file
 # MakeHuman Skeleton file
 
