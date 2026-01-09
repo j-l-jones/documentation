@@ -11,6 +11,15 @@ description: "MakeHuman Body Pose Units"
 
 MakeHuman's body posing system uses **pose units** - individual, isolated body movements that can be combined to create complex poses. Unlike face pose units (which use BVH files), body pose units are stored **directly as quaternion rotations** in a single JSON file.
 
+### High-level structure
+
+The file has two top-level fields:
+
+- name: a label for the pose-unit set
+
+- poses: a dictionary mapping pose-unit name → bone rotations 
+
+
 **Key Differences from Face Pose Units:**
 
 | Aspect | Face Pose Units | Body Pose Units |
@@ -86,20 +95,6 @@ This defines:
 - Bone `oris02` rotates with quaternion `(w=0.993819, x=-0.0954232, y=0, z=0.0152616)`
 - Bone `oris01` rotates with quaternion `(w=0.973121, x=-0.200122, y=0, z=0)`
 - Bone `special02` rotates with quaternion `(w=0.999808, x=0.0162821, y=0, z=0.00510081)`
-
-#### Identity Quaternion (No Rotation)
-
-The identity quaternion represents no rotation:
-
-```json
-[1, 0, 0, 0]
-```
-
-Or very close to it:
-
-```json
-[0.999999, 0.000001, 0, 0]
-```
 
 ---
 
@@ -237,57 +232,6 @@ The standard body-poseunits.json includes pose units organized by body region:
 - `Toe9OpenLeft` - Open toe 9 (alternative)
 
 **Note:** Right-side poses follow the same pattern with `.R` suffix instead of `.L`.
-
----
-
-## Bone Naming Convention
-
-Body pose units reference bones from the MakeHuman skeleton. Common bone patterns:
-
-### Symmetrical Bones
-
-Most bones have left/right variants:
-- **Left:** `.L` suffix (e.g., `upperarm01.L`, `lowerleg01.L`)
-- **Right:** `.R` suffix (e.g., `upperarm01.R`, `lowerleg01.R`)
-
-### Common Bone Names
-
-**Spine and Torso:**
-- `spine1`, `spine2`, `spine3`, `spine4` - Spine segments
-- `breast.L`, `breast.R` - Breast/chest area
-- `pelvis.L`, `pelvis.R` - Pelvis/hip area
-
-**Arms:**
-- `clavicle.L/R` - Collar bone
-- `shoulder.L/R` - Shoulder joint
-- `upperarm01.L/R`, `upperarm02.L/R` - Upper arm segments
-- `lowerarm01.L/R`, `lowerarm02.L/R` - Lower arm/forearm segments
-- `wrist.L/R` - Wrist joint
-
-**Hands:**
-- `metacarpal1.L/R` through `metacarpal5.L/R` - Hand palm bones
-- `finger1-1.L/R` through `finger5-3.L/R` - Finger segments (finger-segment pattern)
-
-**Legs:**
-- `upperleg.L/R` - Thigh
-- `lowerleg01.L/R`, `lowerleg02.L/R` - Lower leg/calf segments
-- `heel.L/R` - Heel/ankle area
-
-**Feet:**
-- `metatarsal1.L/R` through `metatarsal5.L/R` - Foot bones
-- `toe1-1.L/R` through `toe5-3.L/R` - Toe segments
-
-**Head and Neck:**
-- `neck`, `neck01`, `neck02`, `neck03` - Neck segments
-- `head` - Head
-- `platysma03.L/R`, `platysma06.L/R` - Neck muscles
-
-**Special:**
-- `scapula.L/R` - Shoulder blade
-- `oris01`, `oris02` - Mouth/lip area (from face rig)
-- `special02` - Special control bone
-- `collisionArm1.L/R`, `collisionArm2.L/R` - Collision detection helpers
-- `collisionLeg0.L/R`, `collisionLeg1.L/R`, `collisionLeg2.L/R` - Collision detection helpers
 
 ---
 ## Technical Details
