@@ -345,4 +345,6 @@ The standard `Frame Time: 0.041667` (24 fps) is not used for pose units since th
 
 **.mhpose** Defines a facial expression by storing small bone pose adjustments used by the Expression Mixer.
 
+**body-poseunits.json** A library of small body pose adjustments, stored as per-bone quaternion rotations, that MakeHuman can blend to build poses.
+
 
