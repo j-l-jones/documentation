@@ -12,7 +12,7 @@ description: "MakeHuman Expression Pose file"
 The `.mhpose` file format is used by MakeHuman to store facial expression poses. These files define expressions as a weighted blend of unit poses (pose units) from the face pose unit library.
 
 ## What is an .mhpose file?
- 
+
 An .mhpose file defines a facial expression in MakeHuman.
 
 It stores a small set of bone adjustments that describe how facial bones move relative to their neutral (rest) position.
@@ -201,13 +201,14 @@ Default search paths for `.mhpose` files:
 - \<UserDataDir\>/data/expressions/
 - \<SystemDataDir\>/data/expressions/
 
+### Related Files
+
+**face-poseunits.json** and **face-poseunits.bvh** Define the small, reusable facial bone movements that MakeHuman combines to create expressions.
+
 
 ### Example .mhpose file
 
 [smile01.mhpose](smile01.mhpose)
-
-
-
 
 
 [^1]: **Linear blend skinning**: A method for attaching a character’s surface to its skeleton, where each vertex follows a weighted average of the movements of its influencing bones.
