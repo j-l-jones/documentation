@@ -58,13 +58,6 @@ makehuman/data/poseunits/
 }
 ```
 
-### Top-Level Fields
-
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| `name` | String | Name of the pose unit collection (typically "Body") |
-| `poses` | Object | Dictionary mapping pose names to bone rotation data |
-
 ### Pose Entry Structure
 
 Each pose is a dictionary where:
