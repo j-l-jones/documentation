@@ -1,7 +1,7 @@
 ---
 title: "face-poseunits"
 weight: 20
-description: "MakeHuman Expression Pose file"
+description: "MakeHuman Expression Pose Units"
 ---
 
 ## face-poseunits
@@ -66,16 +66,6 @@ The JSON file tells MakeHuman:
 - how they should be combined
 
 - where they appear in tools like the Expression Mixer
-  
-### Relationship to the BVH file
-
-The JSON file references pose units defined in the BVH file.
-
-In other words:
-
-BVH → geometry and motion data
-
-JSON → meaning, organization, and presentation
 
 ### Structure
 
@@ -123,6 +113,17 @@ Index 59 → Frame 59 → "TonguePointDown"
 ```
 
 **Important:** The array index is zero-based and directly corresponds to the frame number in the BVH file.
+
+
+### Relationship to the BVH file
+
+The JSON file references pose units defined in the BVH file.
+
+In other words:
+
+BVH → geometry and motion data
+
+JSON → meaning, organization, and presentation
 
 ---
 
@@ -340,5 +341,8 @@ MakeHuman uses:
 
 The standard `Frame Time: 0.041667` (24 fps) is not used for pose units since they're static poses, not animations. Each "frame" is actually an independent pose snapshot.
 
+### Related Files
+
+**.mhpose** Defines a facial expression by storing small bone pose adjustments used by the Expression Mixer.
 
 
