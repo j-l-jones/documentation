@@ -1,0 +1,13 @@
+# Ignore Hugo build output folder
+/public/
+# Ignore other Hugo related runtime folders
+/assets/
+# resources folder is Hugo's cahce for processed assets, optimized images, compiled SCSS, etc. generated automatically
+/resources/
+# Hugo themes - installed via git
+# git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+# git clone https://github.com/alex-shpak/hugo-book themes/hugo-book e 
+/themes/
+# Hugo build lock file
+.hugo_build.lock
+

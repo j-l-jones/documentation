@@ -1,0 +1,18 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'MakeHuman2 Documentation'
+contentDir = 'docs'
+theme = 'hugo-book'
+
+[params]
+  custom_css = ["css/custom.css"]
+  BookMenuBundle = '/menu'
+  BookSection = '*'
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.goldmark.renderer]
+    unsafe = true  # Allow raw HTML in markdown
