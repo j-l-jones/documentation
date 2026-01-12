@@ -13,14 +13,9 @@ There are many themes to choose from - available via git.
 ```git clone https://github.com/alex-shpak/hugo-book themes/hugo-book ```
 
 <figure>
-  <img src="hugo-look-feel.png" alt="hugo-book theme look and feel">
+  <img src="hugo-look-feel.png" alt="hugo-book theme look and feel"  width="400">
   <figcaption>'hugo book' theme</figcaption>
 </figure>
-
-
-## Show subdirectories
-
-create an _index.md file in each of them you want to see, Hugo will pick up on it
 
 ## Launch Hugo Server
 
@@ -84,6 +79,9 @@ or
 git clone https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
 
+## Show subdirectories
+
+create an _index.md file in each of them you want to see, Hugo will pick up on it
 
 
 ## Place in-line images
@@ -93,7 +91,7 @@ you can put all the images in the 'static' folder with a path that matches your 
 or, just put it in the local folder and reference it directly
 
 <figure>
-  <img src="hugo-example.png" alt="inline image">
+  <img src="hugo-example.png" alt="inline image"  width="400">
   <figcaption>Hugo Weaving thinking about stuff</figcaption>
 </figure>
 
