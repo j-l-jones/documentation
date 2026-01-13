@@ -13,7 +13,22 @@ body {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 700 !important;
+}
+
+.markdown-inner h1,
+.markdown-inner h2,
+.markdown-inner h3,
+.markdown-inner h4,
+.markdown-inner h5,
+.markdown-inner h6,
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-weight: 700 !important;
 }
 
 /* Code blocks */

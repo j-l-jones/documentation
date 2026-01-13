@@ -42,7 +42,16 @@ hugo.toml
 
 Defines:
 - site settings: base url, language and title
-- 
+- directory configuration
+- theme
+- custom parameters
+  - css stling
+  - book menu settings
+- markdown rednering
+  - table of contents levels
+  - allow raw html in markdown  
+  
+
 
 ## Hugo folders
 
