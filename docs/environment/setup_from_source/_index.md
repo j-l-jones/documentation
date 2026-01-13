@@ -58,8 +58,6 @@ Before running the app, create the Configuration Folder
 
 ### Configuration Folder
 
-#### create Configuration folder
-
 If it doesn't exist yet, create the configuration folder: 
 
 ##### MacOs
