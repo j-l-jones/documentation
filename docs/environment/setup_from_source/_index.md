@@ -170,12 +170,13 @@ The first time the app is run, it will create subfolders in the user data folder
 - target
 - themes
 
-### Logging 
+### Logging
 
-Logs should appear in <UserDataHome>/log
+If redirect_messages is enabled in the config file, then logs should appear in 
+
+```<UserDataHome>/log```
 
 ***todo: do they?***
-
 
 ### setup virtualenv
 
