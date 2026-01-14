@@ -4,6 +4,7 @@ weight: 20
 description: "MakeHuman model file"
 ---
 
+## .mhm file
 # MakeHuman2 model file (.mhm)
 
 ## Overview

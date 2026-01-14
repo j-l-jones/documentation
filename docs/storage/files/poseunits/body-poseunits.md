@@ -4,7 +4,7 @@ weight: 20
 description: "MakeHuman Body Pose Units"
 ---
 
-## body-poseunits
+## body-poseunits.json
 # MakeHuman Body Pose Units
 
 ## Overview

@@ -4,7 +4,7 @@ weight: 20
 description: "MakeHuman Expression Pose Units"
 ---
 
-## face-poseunits
+## face-poseunits.json
 # MakeHuman Expression Pose Units
 
 ## Overview

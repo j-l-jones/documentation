@@ -1,10 +1,11 @@
 ---
-title: "Asset Selection Filter System"
+title: "selection_filter.json"
 weight: 27
-description: "Documentation for selection_filter.json - asset categorization and filtering"
+description: "asset categorization and filtering"
 ---
 
-# Asset Selection Filter System (selection_filter.json)
+# selection_filter.json
+# Asset Selection Filter System
 
 ## Overview
 
