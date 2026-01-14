@@ -1,7 +1,7 @@
 ---
 title: ".proxy file"
 weight: 20
-description: "MakeHuman Proxy file"
+description: "MakeHuman2 Proxy file"
 ---
 
 ## .proxy file
