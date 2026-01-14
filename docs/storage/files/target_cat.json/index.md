@@ -4,7 +4,7 @@ weight: 20
 description: "MakeHuman Target Category Definition file"
 ---
 
-## target_cat.json
+## target_cat.json and modelling.json
 
 # Target Categories and Modelling Configuration
 
