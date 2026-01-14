@@ -5,7 +5,7 @@ description: "Documentation for macro.json - complex multi-target morphing syste
 ---
 
 ## macro.json
-# Macro Target System (macro.json)
+# Macro Target System
 
 ## Overview
 
