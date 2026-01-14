@@ -19,8 +19,6 @@ This section documents all the file formats used by MakeHuman2.
 - [.target file](target/) - Morph target fil
 
 ---
-- [body-poseunits.json](poseunits/) - MakeHuman body poseunits
-- [face-poseunits.json](poseunits/) - MakeHuman facial poseunits
 - [macro.json](macro.json/) - Macro target configuration
 - [makehuman.qss](makehuman.qss) - MakeHuman Qt stylesheet
 - [modelling.json](target_cat.json/) - modelling configuration
