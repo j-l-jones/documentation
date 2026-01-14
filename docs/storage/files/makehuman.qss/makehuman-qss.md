@@ -337,3 +337,7 @@ Common QSS property types used:
 - [Qt Style Sheets Documentation](https://doc.qt.io/qt-5/stylesheet.html)
 - [Qt Style Sheets Reference](https://doc.qt.io/qt-5/stylesheet-reference.html)
 - [Qt Widget Classes](https://doc.qt.io/qt-5/widget-classes.html)
+
+## Example
+
+[makehuman.qss](makehuman.qss)
