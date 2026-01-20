@@ -235,16 +235,7 @@ poses/hand-right-fist.target
 poses/leg-left-knee-bend.target
 ```
 
+### Example .target file
 
-
-
-## References
-
-- **Source Code**: `makehuman/shared/proxy.py`
-- **Compilation Script**: `makehuman/compile_proxies.py`
-
-
-### Example .proxy file
-
-[female1605.proxy](female1605.proxy)
+[upperbody-depth-incr.target](upperbody-depth-incr.target)
 

@@ -10,6 +10,7 @@ bookFlatSection: false
 This section documents all the file formats used by MakeHuman2.
 
 - [.bvh file](bvh/) - MakeHuman animation/pose file
+- [.frag file](frag/) - MakeHuman fragment shader file
 - [.mhm file](mhm/) - MakeHuman model file
 - [.mhmat file](mhmat/) - Material definition file
 - [.mhpose file](mhpose/) - Pose definition file
@@ -20,6 +21,7 @@ This section documents all the file formats used by MakeHuman2.
 
 ---
 - [macro.json](macro.json/) - Macro target configuration
+- [makehuman2.conf](makehuman2.conf) - MakeHuman Configuration file
 - [makehuman.qss](makehuman.qss) - MakeHuman Qt stylesheet
 - [modelling.json](target_cat.json/) - modelling configuration
 - [selection_filter.json](selection_filter.json/) - asset selection filter
