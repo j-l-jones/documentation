@@ -1,4 +1,11 @@
-# Configuration File (makehuman2.conf / makehuman2_default.conf)
+---
+title: "makehuman2.conf"
+weight: 27
+description: "MakeHuman2 configuration file"
+---
+
+## makehuman2.conf
+# MakeHuman2 Configuration File
 
 ## Overview
 

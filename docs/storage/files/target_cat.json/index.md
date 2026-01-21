@@ -4,9 +4,9 @@ weight: 20
 description: "MakeHuman Target Category Definition file"
 ---
 
-## target_cat.json and modelling.json
+## target_cat.json
 
-# Target Categories and Modelling Configuration
+# Target Categories Configuration
 
 ## Overview
 The MakeHuman2 target system uses two complementary JSON configuration files to organize and define morphing targets:

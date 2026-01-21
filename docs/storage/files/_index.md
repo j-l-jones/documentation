@@ -21,9 +21,10 @@ This section documents all the file formats used by MakeHuman2.
 
 ---
 - [macro.json](macro.json/) - Macro target configuration
-- [makehuman2.conf](makehuman2.conf) - MakeHuman Configuration file
+- [makehuman2.conf](makehuman2.conf) - MakeHuman configuration file
 - [makehuman.qss](makehuman.qss) - MakeHuman Qt stylesheet
 - [modelling.json](target_cat.json/) - modelling configuration
 - [selection_filter.json](selection_filter.json/) - asset selection filter
+- [shader.json](shader.json/) - global shader rendering configuration
 - [target_cat.json](target_cat.json/) - target categories
 
