@@ -31,7 +31,7 @@ This file controls:
 
 **User Override:**
 
-Currently, `shader.json` does not support user overrides. All modifications are made through the MakeHuman2 Scene and Lighting window (Edit → Scene/Lighting), which updates the system file.
+Currently, `shader.json` does not support user overrides.
 
 ---
 
@@ -85,8 +85,6 @@ The OpenGL clear color, which is the background color of the viewport when no sk
 - `[1.0, 1.0, 1.0, 1.0]` - White (for bright, studio-like environment)
 - `[0.1, 0.2, 0.3, 1.0]` - Dark blue-gray (atmospheric)
 
-**UI Control:** Edit → Scene/Lighting → Background → Background color
-
 ---
 
 ### `ambientcolor`
@@ -117,8 +115,6 @@ This creates neutral white ambient light at 35% intensity.
 - `[1.0, 0.95, 0.90, 0.35]` - Warm tinted ambient
 - `[0.90, 0.95, 1.0, 0.35]` - Cool tinted ambient
 
-**UI Control:** Edit → Scene/Lighting → Ambient Light → Luminance and Color
-
 ---
 
 ### `specularfocus`
@@ -146,8 +142,6 @@ This value is the "shininess" exponent in the Phong/Blinn-Phong lighting model.
 **Effect:**
 - Lower = Broader, softer specular highlights
 - Higher = Tighter, sharper specular highlights
-
-**UI Control:** Edit → Scene/Lighting → Phong specific → Specular light, Focus
 
 ---
 
@@ -178,8 +172,6 @@ Blinn-Phong generally produces more consistent and realistic highlights, especia
 "blinn": true
 ```
 
-**UI Control:** Edit → Scene/Lighting → Phong specific → Blinn/Phong radio buttons
-
 ---
 
 ### `skybox`
@@ -203,7 +195,42 @@ Enables or disables the skybox (environment cubemap).
 - When `true`: 360° environment background, provides reflections for PBR materials
 - When `false`: Solid color background (from `glclearcolor`)
 
-**UI Control:** Edit → Scene/Lighting → Background → Skybox checkbox
+<style>
+  /* Optional CSS for responsive layout */
+  .container {
+    display: flex; /* Uses CSS Flexbox for side-by-side layout */
+    justify-content: center; /* Centers the images within the container */
+    gap: 20px; /* Adds space between images */
+  }
+  .figure {
+    display: flex;
+    flex-direction: column; /* Stacks image and caption vertically */
+    align-items: center; /* Centers image and caption */
+    text-align: center; /* Ensures text in caption is centered */
+    flex: 1; /* Distributes space equally among figures */
+    max-width: 50%; /* Ensures two images fit side-by-side in a 2-column layout */
+  }
+  img {
+    max-width: 100%; /* Ensures image fits within its figure container */
+    height: auto;
+  }
+  figcaption {
+    margin-top: 10px; /* Space between image and caption */
+    font-style: italic; /* Optional: style the caption */
+    font-size: 0.9em; /* Optional: style the caption */
+  }
+</style>
+
+<div class="container">
+  <figure class="figure">
+    <img src="viewport-with-skybox-enabled2.png" alt="skybox disabled">
+    <figcaption>viewport with skybox</figcaption>
+  </figure>
+  <figure class="figure">
+    <img src="skybox-disabled.png" alt="skybox disabled", width=82%>
+    <figcaption>skybox disabled</figcaption>
+  </figure>
+</div>
 
 ---
 
@@ -243,7 +270,11 @@ Skyboxes are stored in `data/shaders/skybox/<name>/` with files:
 - `"default"` - Standard skybox (if available)
 - Custom skybox names based on available directories
 
-**UI Control:** Edit → Scene/Lighting → Background → Skybox list and Select button
+<figure>
+  <img src="viewport-custom-skybox.jpg" alt="Viewport with custom skybox" width=50%>
+  <figcaption>Viewport with custom skybox</figcaption>
+</figure>
+
 
 ---
 
@@ -357,8 +388,6 @@ This creates a white light with intensity 7.0.
 - Good for: sun, moon, distant light sources
 - Attenuation: `intensity / 4.0` (constant)
 
-**UI Control:** Edit → Scene/Lighting → Light Source panels (Luminance, Color, Position controls)
-
 ---
 
 ## Default Configuration
@@ -391,237 +420,6 @@ This creates a balanced three-point lighting setup typical for character work.
 
 ---
 
-## Modifying the Configuration
-
-### Through the Scene and Lighting Window
-
-The primary way to modify shader settings is through the UI:
-
-1. **Open Scene/Lighting:** Edit → Scene/Lighting
-2. **Adjust Settings:**
-   - **Ambient Light:** Luminance slider and color picker
-   - **Phong Specific:** Specular focus slider, Blinn/Phong radio buttons
-   - **Background:** Color picker, skybox checkbox and selection
-   - **Light Sources:** Three expandable panels with controls for each light
-     - Luminance (intensity) slider
-     - Color picker
-     - Position controls (X/Z map, Y height slider)
-     - Point/Directional toggle
-
-3. **Save:** Changes are automatically applied to the viewport and saved to `shader.json`
-
----
-
-## Common Lighting Scenarios
-
-### Studio Portrait Lighting
-
-Bright, even lighting for detailed character work:
-
-```json
-{
-    "glclearcolor": [0.3, 0.3, 0.3, 1.0],
-    "ambientcolor": [1.0, 1.0, 1.0, 0.45],
-    "specularfocus": 32.0,
-    "blinn": true,
-    "skybox": false,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [6.0, 8.0, 8.0], "color": [1.0, 1.0, 1.0, 10.0], "type": 0 },
-        { "position": [-6.0, 8.0, 8.0], "color": [1.0, 1.0, 1.0, 10.0], "type": 0 },
-        { "position": [0.0, 10.0, -8.0], "color": [1.0, 1.0, 1.0, 6.0], "type": 0 }
-    ]
-}
-```
-
-**Characteristics:**
-- Higher ambient light (45%)
-- Bright, symmetrical key lights
-- Moderate backlight
-- Neutral gray background
-- Good for detailed inspection
-
-### Dramatic Lighting
-
-Low ambient, strong directional light for mood:
-
-```json
-{
-    "glclearcolor": [0.05, 0.05, 0.08, 1.0],
-    "ambientcolor": [0.9, 0.95, 1.0, 0.15],
-    "specularfocus": 40.0,
-    "blinn": true,
-    "skybox": true,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [1.0, 0.8, 0.5], "color": [1.0, 0.95, 0.85, 8.0], "type": 1 },
-        { "position": [-0.5, 0.3, -0.8], "color": [0.6, 0.7, 1.0, 3.0], "type": 1 },
-        { "position": [0.0, 8.0, 0.0], "color": [1.0, 1.0, 1.0, 0.5], "type": 0 }
-    ]
-}
-```
-
-**Characteristics:**
-- Low ambient light (15%)
-- Directional sun-like key light (warm)
-- Cool fill light
-- Minimal top light
-- Dark background
-- Strong shadows, high contrast
-
-### Outdoor/Natural Lighting
-
-Simulates sunlight and sky:
-
-```json
-{
-    "glclearcolor": [0.5, 0.6, 0.8, 1.0],
-    "ambientcolor": [0.85, 0.90, 1.0, 0.40],
-    "specularfocus": 28.0,
-    "blinn": true,
-    "skybox": true,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [0.5, 1.0, 0.3], "color": [1.0, 0.98, 0.95, 9.0], "type": 1 },
-        { "position": [-0.3, 0.4, -0.6], "color": [0.7, 0.8, 1.0, 2.0], "type": 1 },
-        { "position": [0.0, 8.0, 0.0], "color": [1.0, 1.0, 1.0, 0.0], "type": 0 }
-    ]
-}
-```
-
-**Characteristics:**
-- Directional sun (warm, type 1)
-- Cool sky fill light (blue tint)
-- Light blue-gray background
-- Cool-tinted ambient
-- Third light disabled (intensity 0)
-
-### Warm Interior Lighting
-
-Indoor tungsten/warm lighting:
-
-```json
-{
-    "glclearcolor": [0.15, 0.12, 0.10, 1.0],
-    "ambientcolor": [1.0, 0.90, 0.75, 0.30],
-    "specularfocus": 25.0,
-    "blinn": true,
-    "skybox": false,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [8.0, 9.0, 5.0], "color": [1.0, 0.85, 0.65, 8.0], "type": 0 },
-        { "position": [-8.0, 7.0, 5.0], "color": [1.0, 0.90, 0.70, 6.0], "type": 0 },
-        { "position": [0.0, 6.0, -8.0], "color": [1.0, 0.88, 0.68, 4.0], "type": 0 }
-    ]
-}
-```
-
-**Characteristics:**
-- Warm orange/yellow color temperature
-- Warm-tinted ambient
-- Point lights for natural falloff
-- Dark warm-tinted background
-- Cozy interior feel
-
----
-
-## Integration with Shaders
-
-The `shader.json` configuration is read during initialization and passed as uniform variables to the fragment shaders.
-
-### Loading Process
-
-1. **Initialization:** `core/globenv.py` reads `shader.json` via `readShaderInitJSON()`
-2. **Storage:** Settings stored in `glob.shaderInit`
-3. **Light Setup:** `opengl/camera.py` creates `Light` object with these settings
-4. **Shader Uniforms:** Values passed to shaders via `setShader()` method
-
-### Shader Uniform Mapping
-
-The configuration values are passed to GLSL shaders as uniforms:
-
-| JSON Field | GLSL Uniform | Type | Shaders |
-| --- | --- | --- | --- |
-| `ambientcolor` | `ambientLight` | `vec4` | phong, pbr, toon |
-| `specularfocus` | `lightWeight.y` | `float` | phong |
-| `blinn` | `blinn` | `bool` | phong |
-| `lamps[i].position` | `pointLights[i].position` | `vec3` | phong, pbr, toon |
-| `lamps[i].color` | `pointLights[i].color` | `vec3` | phong, pbr, toon |
-| `lamps[i].color[3]` | `pointLights[i].intensity` | `float` | phong, pbr, toon |
-| `lamps[i].type` | `pointLights[i].type` | `int` | phong, pbr, toon |
-| `skybox` | `useSky` | `bool` | pbr |
-| `glclearcolor` | Used for `glClearColor()` | - | OpenGL |
-
-### Affected Shaders
-
-The configuration affects these shaders:
-- **`phong.frag`** - All lighting settings, specular focus, Blinn toggle
-- **`pbr.frag`** - Lighting, ambient, skybox reflections
-- **`toon.frag`** - Lighting for cel shading
-- **`litsphere.frag`** - Minimal (mostly uses lit-sphere texture)
----
-
-## Example Configurations
-
-### Minimal Lighting
-
-Single directional light for fastest rendering:
-
-```json
-{
-    "glclearcolor": [0.8, 0.8, 0.8, 1.0],
-    "ambientcolor": [1.0, 1.0, 1.0, 0.60],
-    "specularfocus": 30.0,
-    "blinn": true,
-    "skybox": false,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [0.5, 1.0, 0.5], "color": [1.0, 1.0, 1.0, 6.0], "type": 1 },
-        { "position": [0.0, 0.0, 0.0], "color": [1.0, 1.0, 1.0, 0.0], "type": 0 },
-        { "position": [0.0, 0.0, 0.0], "color": [1.0, 1.0, 1.0, 0.0], "type": 0 }
-    ]
-}
-```
-
-### High-Contrast Fashion Lighting
-
-Strong key, minimal fill:
-
-```json
-{
-    "glclearcolor": [0.0, 0.0, 0.0, 1.0],
-    "ambientcolor": [1.0, 1.0, 1.0, 0.10],
-    "specularfocus": 45.0,
-    "blinn": true,
-    "skybox": false,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [10.0, 10.0, 8.0], "color": [1.0, 1.0, 1.0, 12.0], "type": 0 },
-        { "position": [-4.0, 6.0, 8.0], "color": [1.0, 1.0, 1.0, 3.0], "type": 0 },
-        { "position": [0.0, 8.0, -12.0], "color": [1.0, 1.0, 1.0, 8.0], "type": 0 }
-    ]
-}
-```
-
-### Soft Portrait Lighting
-
-Even, flattering lighting for portraits:
-
-```json
-{
-    "glclearcolor": [0.95, 0.95, 0.95, 1.0],
-    "ambientcolor": [1.0, 0.98, 0.95, 0.50],
-    "specularfocus": 22.0,
-    "blinn": true,
-    "skybox": false,
-    "skyboxname": "default",
-    "lamps": [
-        { "position": [5.0, 8.0, 10.0], "color": [1.0, 0.98, 0.95, 9.0], "type": 0 },
-        { "position": [-5.0, 8.0, 10.0], "color": [1.0, 0.98, 0.95, 9.0], "type": 0 },
-        { "position": [0.0, 12.0, 0.0], "color": [1.0, 1.0, 1.0, 5.0], "type": 0 }
-    ]
-}
-```
 
 ---
 
