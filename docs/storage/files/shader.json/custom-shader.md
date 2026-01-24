@@ -1,3 +1,9 @@
+---
+title: "Customizing Shaders"
+weight: 27
+description: "Shader customization"
+---
+
 # Customizing Shaders
 
 
