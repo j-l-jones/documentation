@@ -195,42 +195,11 @@ Enables or disables the skybox (environment cubemap).
 - When `true`: 360° environment background, provides reflections for PBR materials
 - When `false`: Solid color background (from `glclearcolor`)
 
-<style>
-  /* Optional CSS for responsive layout */
-  .container {
-    display: flex; /* Uses CSS Flexbox for side-by-side layout */
-    justify-content: center; /* Centers the images within the container */
-    gap: 20px; /* Adds space between images */
-  }
-  .figure {
-    display: flex;
-    flex-direction: column; /* Stacks image and caption vertically */
-    align-items: center; /* Centers image and caption */
-    text-align: center; /* Ensures text in caption is centered */
-    flex: 1; /* Distributes space equally among figures */
-    max-width: 50%; /* Ensures two images fit side-by-side in a 2-column layout */
-  }
-  img {
-    max-width: 100%; /* Ensures image fits within its figure container */
-    height: auto;
-  }
-  figcaption {
-    margin-top: 10px; /* Space between image and caption */
-    font-style: italic; /* Optional: style the caption */
-    font-size: 0.9em; /* Optional: style the caption */
-  }
-</style>
-
-<div class="container">
-  <figure class="figure">
-    <img src="viewport-with-skybox-enabled2.png" alt="skybox disabled">
-    <figcaption>viewport with skybox</figcaption>
-  </figure>
-  <figure class="figure">
-    <img src="skybox-disabled.png" alt="skybox disabled", width=82%>
-    <figcaption>skybox disabled</figcaption>
-  </figure>
+<div style="display: flex; justify-content: space-around;">
+  <img src="viewport-with-skybox-enabled2.png" alt="skybox enabled" style="width: 48%; margin: 1%;">
+  <img src="skybox-disabled.png" alt="skybox disabled" style="width: 48%; margin: 1%;">
 </div>
+
 
 ---
 
@@ -432,14 +401,6 @@ The `shader.json` file is the central configuration for MakeHuman2's lighting an
 - Specular highlights
 - Up to 3 configurable lights (point or directional)
 - Lighting calculation method (Phong/Blinn-Phong)
-
-**Key Points:**
-- Modified through UI (Edit → Scene/Lighting) or manual editing
-- Changes immediately affect viewport rendering
-- Supports both point lights (positional) and directional lights (sun-like)
-- Lighting settings passed to fragment shaders as uniforms
-- Critical for achieving desired mood and visual quality
-
 
 ### Sample shader.json file
 
