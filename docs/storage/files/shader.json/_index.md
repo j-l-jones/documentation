@@ -388,9 +388,6 @@ This creates a balanced three-point lighting setup typical for character work.
 
 ---
 
-
----
-
 ## Summary
 
 The `shader.json` file is the central configuration for MakeHuman2's lighting and rendering environment. It provides control over:

@@ -259,3 +259,8 @@ To force recompilation:
 - Delete the `.mhpxy` file
 - Modify the `.mhclo` file timestamp
 - Use the "Rescan" button in MakeHuman
+
+
+## Create Custom Clothing with MakeClothes
+
+[makehumancommunity.org/MakeClothes](https://static.makehumancommunity.org/assets/creatingassets/makeclothes.html)
