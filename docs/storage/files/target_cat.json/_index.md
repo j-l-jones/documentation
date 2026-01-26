@@ -1,6 +1,5 @@
 ---
 title: "target_cat.json"
-weight: 20
 description: "MakeHuman Target Category Definition file"
 ---
 

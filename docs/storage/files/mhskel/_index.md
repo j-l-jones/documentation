@@ -1,6 +1,5 @@
 ---
 title: ".mhskel file"
-weight: 20
 description: "MakeHuman Skeleton file"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ".mhw file"
-weight: 20
 description: "MakeHuman Weights file"
 ---
 

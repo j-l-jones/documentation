@@ -1,6 +1,5 @@
 ---
 title: "macro.json"
-weight: 26
 description: "Documentation for macro.json - complex multi-target morphing system"
 ---
 

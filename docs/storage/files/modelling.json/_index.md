@@ -1,6 +1,5 @@
 ---
 title: "modelling.json"
-weight: 20
 description: "Target Configuration file"
 ---
 

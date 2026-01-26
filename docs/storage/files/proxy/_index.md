@@ -1,6 +1,5 @@
 ---
 title: ".proxy file"
-weight: 20
 description: "MakeHuman2 Proxy file"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ".target file"
-weight: 20
 description: "MakeHuman Target file"
 ---
 

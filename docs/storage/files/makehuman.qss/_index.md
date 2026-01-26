@@ -1,6 +1,5 @@
 ---
 title: "makehuman.qss"
-weight: 50
 description: "MakeHuman Qt Stylesheet"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "shader.json"
-weight: 27
 description: "Shader configuration file"
 ---
 
@@ -240,7 +239,7 @@ Skyboxes are stored in `data/shaders/skybox/<name>/` with files:
 - Custom skybox names based on available directories
 
 <figure>
-  <img src="viewport-custom-skybox.jpg" alt="Viewport with custom skybox" width=50%>
+  <img src="viewport-custom-skybox.png" alt="Viewport with custom skybox" width=50%>
   <figcaption>Viewport with custom skybox</figcaption>
 </figure>
 

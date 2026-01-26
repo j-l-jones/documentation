@@ -1,6 +1,5 @@
 ---
 title: "selection_filter.json"
-weight: 27
 description: "asset categorization and filtering"
 ---
 

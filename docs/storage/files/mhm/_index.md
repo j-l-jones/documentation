@@ -1,6 +1,5 @@
 ---
 title: ".mhm file"
-weight: 20
 description: "MakeHuman model file"
 ---
 

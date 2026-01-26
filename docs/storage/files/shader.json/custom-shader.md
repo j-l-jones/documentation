@@ -74,6 +74,7 @@ Bright, even lighting for detailed character work:
 
 <figure>
   <img src="studio-portrait-lighting.jpg" alt="Viewport with studio lighting" width=50%>
+  <figcaption>studio lighting example</figcaption>
 </figure>
 
 
@@ -107,6 +108,7 @@ Low ambient, strong directional light for mood:
 
 <figure>
   <img src="dramatic-lighting.jpg" alt="Viewport with dramatic lighting" width=50%>
+  <figcaption>dramatic lighting example</figcaption>
 </figure>
 
 
@@ -139,6 +141,7 @@ Simulates sunlight and sky:
 
 <figure>
   <img src="outdoor-lighting.jpg" alt="Viewport with outdoor lighting" width=50%>
+  <figcaption>outdoor lighting example</figcaption>
 </figure>
 
 
@@ -171,6 +174,7 @@ Indoor tungsten/warm lighting:
 
 <figure>
   <img src="indoor-lighting.jpg" alt="Viewport with indoor lighting" width=50%>
+  <figcaption>indoor lighting example</figcaption>
 </figure>
 
 ---
@@ -199,6 +203,7 @@ Single directional light for fastest rendering:
 
 <figure>
   <img src="minimal-lighting.jpg" alt="Viewport with minimal lighting" width=50%>
+  <figcaption>minimal lighting example</figcaption>
 </figure>
 
 
@@ -224,6 +229,7 @@ Strong key, minimal fill:
 
 <figure>
   <img src="high-contrast-lighting.jpg" alt="Viewport with high-contrast lighting" width=50%>
+  <figcaption>high-contrast lighting example</figcaption>
 </figure>
 
 
@@ -250,5 +256,6 @@ Even, flattering lighting for portraits:
 
 <figure>
   <img src="portrait-lighting.jpg" alt="Viewport with portrait lighting" width=50%>
+  <figcaption>portrait lighting example</figcaption>
 </figure>
 

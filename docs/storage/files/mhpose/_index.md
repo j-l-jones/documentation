@@ -1,6 +1,5 @@
 ---
 title: ".mhpose file"
-weight: 20
 description: "MakeHuman Pose file"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ".mhmat file"
-weight: 20
 description: "MakeHuman Materials file"
 ---
 

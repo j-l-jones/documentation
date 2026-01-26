@@ -1,6 +1,5 @@
 ---
 title: "makehuman2.conf"
-weight: 27
 description: "MakeHuman2 configuration file"
 ---
 
